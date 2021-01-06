@@ -4,3 +4,18 @@ email:
 ip:
   limit: 15
   time: 1
+datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://118.190.148.196:8090/ceshi?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=GMT%2B8
+  username: root
+  password: 'YTB123456ytb'
+  hikari:
+    idle-timeout: 60000 # 空闲连接多久被移除
+    connection-timeout: 60000 # 连接超时
+    connection-test-query: SELECT 1
+    minimum-idle: 10 # 最少空闲连接数
+    maximum-pool-size: 60
+    pool-name: HikariCP
+    auto-commit: true
+    validation-timeout: 3000 #多久校验连接是否为null
+    max-lifetime: 60000
